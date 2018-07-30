@@ -72,17 +72,17 @@ $hash_options['crypt_salt_prefix'] = "$6$";
 # Local password policy
 # This is applied before directory password policy
 # Minimal length
-$pwd_min_length = 0;
+$pwd_min_length = 8;
 # Maximal length
 $pwd_max_length = 0;
 # Minimal lower characters
-$pwd_min_lower = 0;
+$pwd_min_lower = 2;
 # Minimal upper characters
-$pwd_min_upper = 0;
+$pwd_min_upper = 2;
 # Minimal digit characters
-$pwd_min_digit = 0;
+$pwd_min_digit = 2;
 # Minimal special characters
-$pwd_min_special = 0;
+$pwd_min_special = 1;
 # Definition of special characters
 $pwd_special_chars = "^a-zA-Z0-9";
 # Forbidden characters
@@ -105,7 +105,7 @@ $pwd_show_policy_pos = "below";
 # Also applicable for question/answer save
 # user: the user itself
 # manager: the above binddn
-$who_change_password = "manager";
+$who_change_password = "user";
 
 ## Questions/answers
 # Use questions/answers?
@@ -128,7 +128,7 @@ $use_tokens = {{LSSP_MAIL_SUPPORT}};
 # Crypt tokens?
 # true (default)
 # false
-$crypt_tokens = true;
+$crypt_tokens = false;
 # Token lifetime in seconds
 $token_lifetime = "3600";
 
@@ -158,7 +158,7 @@ $sms_message = "{smsresetmessage} {smstoken}";
 $sms_token_length = 6;
 
 # Display help messages
-$show_help = true;
+$show_help = false;
 
 # Language
 $lang ="en";
