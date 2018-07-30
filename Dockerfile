@@ -19,7 +19,7 @@ RUN apt-get update && \
     docker-php-ext-install -j$(nproc) gd && \
     docker-php-ext-install ldap
 
-RUN wget http://ltb-project.org/archives/self-service-password_1.3-1_all.deb -O self-service-password.deb && \
+RUN curl http://ltb-project.org/archives/self-service-password_1.3-1_all.deb -O self-service-password.deb && \
     dpkg -i --force-depends self-service-password.deb ; rm -f self-service-password.deb
 
 # Add LSSP's Apache-config for site
