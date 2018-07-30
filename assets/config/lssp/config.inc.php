@@ -41,7 +41,7 @@ $ldap_bindpw = "{{LDAP_PASS}}";
 $ldap_base = "{{LDAP_BASE}}";
 $ldap_login_attribute = "{{LSSP_ATTR_LOGIN}}";
 $ldap_fullname_attribute = "{{LSSP_ATTR_FN}}";
-$ldap_filter = "(&(objectClass=person)($ldap_login_attribute={login}))";
+$ldap_filter = "(&(objectClass=inetOrgPerson)($ldap_login_attribute={login}))";
 
 # Active Directory mode
 # true: use unicodePwd as password field
@@ -238,7 +238,7 @@ $max_attempts = 3;
 # Encryption, decryption keyphrase, required if $crypt_tokens = true
 # Please change it to anything long, random and complicated, you do not have to remember it
 # Changing it will also invalidate all previous tokens and SMS codes
-$keyphrase = "secret";
+$keyphrase = "changeme";
 
 # Reset URL (if behind a reverse proxy)
 #$reset_url = $_SERVER['HTTP_X_FORWARDED_PROTO'] . "://" . $_SERVER['HTTP_X_FORWARDED_HOST'] . $_SERVER['SCRIPT_NAME'];
@@ -257,10 +257,10 @@ $allowed_lang = array();
 $show_menu = false;
 
 # Logo
-$logo = "images/ltb-logo.png";
+#$logo = "images/ltb-logo.png";
 
 # Background image
-$background_image = "images/unsplash-space.jpeg";
+#$background_image = "images/unsplash-space.jpeg";
 
 # Where to log password resets - Make sure apache has write permission
 # By default, they are logged in Apache log
