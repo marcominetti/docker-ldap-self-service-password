@@ -1,4 +1,4 @@
-FROM php:5-apache
+FROM php:7-apache
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV SCRIPT_DIR /opt
@@ -14,7 +14,8 @@ RUN apt-get update && \
         libpng-dev && \
     apt-get clean && \
     ln -fs /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/ && \
-    docker-php-ext-install -j$(nproc) mcrypt && \
+    pecl install mcrypt-1.0.1 && \
+    docker-php-ext-enable mcrypt && \
     docker-php-ext-install -j$(nproc) iconv && \
     docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
     docker-php-ext-install -j$(nproc) gd && \
