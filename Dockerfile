@@ -11,7 +11,7 @@ RUN apt-get update && \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
-        libpng12-dev && \
+        libpng-dev && \
     apt-get clean && \
     ln -fs /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/ && \
     docker-php-ext-install -j$(nproc) iconv mcrypt && \
