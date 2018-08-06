@@ -94,7 +94,7 @@ $pwd_max_length = 0;
 # Minimal lower characters
 $pwd_min_lower = 2;
 # Minimal upper characters
-$pwd_min_upper = 2;
+$pwd_min_upper = 1;
 # Minimal digit characters
 $pwd_min_digit = 2;
 # Minimal special characters
